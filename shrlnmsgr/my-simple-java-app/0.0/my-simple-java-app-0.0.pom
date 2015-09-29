@@ -39,14 +39,14 @@
                 <artifactId>site-maven-plugin</artifactId>
                 <version>0.12</version>
                 <configuration>
-                    <message>Maven artifacts for ${project.build.finalName}</message>
-                    <merge>true</merge>
-                    <noJekyll>true</noJekyll>
-                    <outputDirectory>${project.build.directory}/staging-maven-repo</outputDirectory>
-                    <branch>refs/heads/experiment</branch>
-                    <repositoryName>test-maven-repo</repositoryName>
-                    <repositoryOwner>tanaka9230</repositoryOwner>
-                    <server>github.tanaka9230</server>
+                    <message>Maven artifacts for ${project.build.finalName}</message><!-- commit message -->
+                    <merge>true</merge><!-- to merge with existing artifacts' tree -->
+                    <noJekyll>true</noJekyll><!-- to disable web page processing -->
+                    <outputDirectory>${project.build.directory}/staging-maven-repo</outputDirectory><!-- to be matched to 'altDeploymentRepository' property -->
+                    <branch>refs/heads/experiment</branch><!-- GitHub branch name -->
+                    <repositoryName>test-maven-repo</repositoryName><!-- GitHub repository name -->
+                    <repositoryOwner>tanaka9230</repositoryOwner><!-- GitHub user name -->
+                    <server>github.tanaka9230</server><!-- to be matched to the '/settings/servers/server/id' element in "settings.xml" -->
                 </configuration>
                 <executions>
                     <execution>
